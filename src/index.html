@@ -4,12 +4,13 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Document</title>
       <script src="https://kit.fontawesome.com/bf7b127d49.js" crossorigin="anonymous"></script>
+	  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="./assets/css/main.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
-<body>
+<body id="google_translate_element">
     <div class="header-warpper pt-2">
         <div class="top-header position-relative container flex align-items-center justify-content-between">
             <img src="./assets/photo/logo.png" class="logo-img" alt="">
@@ -258,9 +259,233 @@
 			</button>
 		</div>
 	</div>
-	
+
+	<section class="schedule-wrapper container-fluid flex justify-content-center">
+		<div class="schedul-wrapper-content row mt-5 mb-3 py-5" style="background: linear-gradient(to bottom, #d3d3d3fb, white);">
+			<div class="col-12 col-lg-6 flex align-items-center" style="flex-direction: column;">
+				<form class="request-form flex align-items-center">
+					<p class="request-form-brand">Thông tin đặt lịch khám</p>
+					<div class="input-field">
+						<input type="text" id="name" required />
+						<label for="name">Họ và tên</label>
+					</div>
+					<div style="display: flex; justify-content: space-between; gap: 5px; width: 100%;">
+						<div class="input-field">
+							<input type="text" id="phone-number" required />
+							<label for="phone-number">Số điện thoại</label>
+						</div>
+						<div class="input-field">
+							<input type="date" id="time" required/>
+							<label for="time">Ngày khám</label>
+						</div>
+					</div>
+					<div class="input-field" style="height: fit-content;">
+						<textarea id="note" required></textarea>
+						<label for="note">Nội dung cần khám bệnh</label>
+					</div>
+					<button type="submit" class="btn btn-primary fw-bold text-uppercase">Đặt lịch khám</button>
+				</form>
+			</div>
+
+			<div class="col-12 col-lg-6 flex align-items-center justify-content-between" style="flex-direction: column;padding: 0;">
+				<button class="btn btn-primary text-uppercase hotline-label">Hotline: <strong>0986 555 555</strong></button>
+				<div class="row" style="width: 100%;">
+					<div class="flex align-items-center col" style="flex-direction: column;">
+						<div class="icon-border">
+							<img src="./assets/photo/search-icon.png" alt="" width="44px" height="44px">
+						</div>
+						<p class="icon-brand" style="text-align: center;">Tra cứu kết quả khám online</p>
+					</div>
+
+					<div class="flex align-items-center col" style="flex-direction: column;">
+						<div class="icon-border">
+							<img src="./assets/photo/step-con.png" alt="" width="44px" height="44px">
+						</div>
+						<p class="icon-brand" style="text-align: center;">Quy trình khám bệnh</p>
+					</div>
+				</div>
+
+				<div class="row" style="width: 100%;">
+					<div class="flex align-items-center col" style="flex-direction: column;">
+						<div class="icon-border">
+							<img src="./assets/photo/price-list-icon.png" alt="" width="44px" height="44px">
+						</div>
+						<p class="icon-brand" style="text-align: center;">Bảng giá</p>
+					</div>
+
+					<div class="flex align-items-center col" style="flex-direction: column;">
+						<div class="icon-border">
+							<img src="./assets/photo/insurance-icon.png" alt="" width="44px" height="44px">
+						</div>
+						<p class="icon-brand" style="text-align: center;">Bảo hiểm</p>
+					</div>
+
+					<div class="flex align-items-center col" style="flex-direction: column;">
+						<div class="icon-border">
+							<img src="./assets/photo/endow-icon.png" alt="" width="44px" height="44px">
+						</div>
+						<p class="icon-brand" style="text-align: center;">Gói khám ưu đãi</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>	
+	<div class="d-flex justify-content-center">
+		<img src="./assets/photo/hr.png" alt="">
+	</div>
+
+
+	<section class="about-us-wrapper flex align-items-center justify-content-center" style="margin-bottom: 30px;">
+		<div class="row flex justify-content-center" style="max-width: 960px;">
+			<div class="col-12 col-lg-5 col-xl-6 flex align-items-center" style="flex-wrap: wrap; max-width: 540; max-height: 288px;">
+				<p class="text-uppercase fw-bold" style="font-size:xx-large; color: #4e8c39;">Về chúng tôi</p>
+				<hr style="height: 5px; background-color: rgb(0, 0, 128); max-width: 100px;">
+				<div class="content"  style="word-wrap: break-word;">
+					Bệnh viện Phạm Ngọc Thạch là bệnh viện hạng I trực thuộc Sở Y
+                    tế thành phố Hồ Chí Minh. Theo Quyết định phân công công tác chỉ đạo tuyến trong lĩnh vực khám, chữa bệnh, ban hành kèm theo Quyết định số
+                    4026 /QĐ-BYT ngày 20 tháng 10 năm 2010 của Bộ trưởng Bộ Y tế, bệnh viện Phạm Ngọc Thạch là bệnh viện đầu nghành, phụ trách chỉ đạo
+                    tuyến trong lĩnh vực khám, chữa bệnh cho chuyên khoa Lao và Bệnh Phổi các tỉnh/thành phố Miền Nam. Bệnh viện là cơ sở thực hành
+                    của Đại học Y Dược TP.HCM, Đại học Y khoa Phạm Ngọc Thạch, Học viện Quân Y, Khoa Y Đại Học Quốc Gia, Khoa Y Đại học Tân Tạo,...
+				</div>
+				<a href="" style="color: #4e8c39; font-weight: 600; text-decoration: underline;">Xem thêm</a>
+			</div>
+			<div class="col-12 col-lg-5 col-xl-6 flex justify-content-center" style="padding: 0;">
+				<img class="hospital-img img-fluid" src="./assets/photo/benhvien.png" alt="">
+			</div>
+		</div>
+	</section>
+
+	<section class="service flex align-items-center" style="flex-direction: column; background-image: url(./assets/photo/my-service-bg.png); width: 100%">
+		<p class="service-title flex justify-content-center align-items-center text-uppercase" style="flex-direction: column; font-size: xx-large; font-weight: bold; color: #0080db; margin-top: 30px;">Dịch vụ của chúng tôi</p>
+
+		<div class="content-card row flex align-items-center" style="max-width: 960px;">
+			<p class="container-sm" style="text-align: center; max-width: 696px;">
+				Bệnh Viện Đa Khoa Phạm Ngọc Thạch với trang thiết bị hệ thống hiện đại hàng đầu thế giới, cùng đội ngũ y bác sĩ nhiều năm kinh nghiệm, sẽ mang đến
+				cho khách hàng, bệnh nhân, những chẩn đoán chính xác nhất về vấn đề sức khỏe của mình!
+			</p>
+			<div id="carouselExampleIndicators2" class="carousel" style="max-width: 945px;">
+				<div class="carousel-inner carousel-inner-2">
+					<div class="carousel-item carousel-item-2 active">
+						<div class="card">
+							<div class="img-wrapper">
+								<img src="./assets/photo/anh1.jpeg" class="card-img-top" alt="...">
+							</div>
+							<div class="card-body">
+							  	<h5 class="card-title">Dịch vụ chăm sóc sức khỏe A</h5>
+							  	<p class="card-text">Dịch vụ này mang đến rất nhiều những tư vấn hữu ích cho sức khỏe của khách hàng....Hơn nữa Khách hàng còn được trải nghiệmrất nhiều những tiện ích khác nữa...
+                            	</p>
+							  	<a href="#" class="fw-bold">Xem chi tiết</a>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item carousel-item-2">
+						<div class="card flex">
+							<div class="img-wrapper">
+								<img src="./assets/photo/anh2.jpg" class="card-img-top" alt="...">
+							</div>
+							<div class="card-body">
+							  	<h5 class="card-title">Dịch vụ chăm sóc sức khỏe A</h5>
+							  	<p class="card-text">Dịch vụ này mang đến rất nhiều những tư vấn hữu ích cho sức khỏe của khách hàng....Hơn nữa Khách hàng còn được trải nghiệmrất nhiều những tiện ích khác nữa...
+                            	</p>
+							  	<a href="#" class="fw-bold">Xem chi tiết</a>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item carousel-item-2 ">
+						<div class="card">
+							<div class="img-wrapper">
+								<img src="./assets/photo/anh3.jpg" class="card-img-top" alt="...">
+							</div>
+							<div class="card-body">
+							  	<h5 class="card-title">Dịch vụ chăm sóc sức khỏe A</h5>
+							  	<p class="card-text">Dịch vụ này mang đến rất nhiều những tư vấn hữu ích cho sức khỏe của khách hàng....Hơn nữa Khách hàng còn được trải nghiệmrất nhiều những tiện ích khác nữa...
+                            	</p>
+							  	<a href="#" class="fw-bold">Xem chi tiết</a>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item carousel-item-2 ">
+						<div class="card">
+							<div class="img-wrapper">
+								<img src="./assets/photo/anh4.avif" class="card-img-top" alt="...">
+							</div>
+							<div class="card-body">
+							  	<h5 class="card-title">Dịch vụ chăm sóc sức khỏe A</h5>
+							  	<p class="card-text">Dịch vụ này mang đến rất nhiều những tư vấn hữu ích cho sức khỏe của khách hàng....Hơn nữa Khách hàng còn được trải nghiệmrất nhiều những tiện ích khác nữa...
+                            	</p>
+							  	<a href="#" class="fw-bold">Xem chi tiết</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button class="carousel-control-prev carousel-control-prev-2" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+				  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				  <span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next carousel-control-next-2" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+				  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				  <span class="visually-hidden">Next</span>
+				</button>
+			</div>
+		</div>
+
+	</section>
+
+	<section class="footer-wrapper flex align-items-center justify-content-center" style="background-color: #BFDCFD; border-top: 5px solid #0d6efd; padding: 20px 0 20px 0">
+		<div class="footer row container">
+			<div>
+				<img class="img-fluid col-12" src="./assets/photo/logo.png" style="width: 200px; height: 150px;" alt="">
+			</div>
+			<div class="col-md-6 col-lg-5">
+				<p class="text-uppercase fw-bold fx-18-cv">
+					BỆNH VIỆN ĐA KHOA PHẠM NGỌC THẠCH
+				</p>
+				<p>
+					Số ĐKKD: <strong>000111555 </strong> - Sở kế hoạch và Đầu tư Thành phố Hà Nội cấp ngày 10/10/2010
+				</p>
+				<p>
+					Giấy phép hoạt động khám chữa bệnh <strong>555666777 </strong>do Bộ cấp ngày 10/10/2010
+				</p>
+				<p>
+					Địa chỉ phòng khám: <strong>Hà Nội, Việt Nam</strong>
+				</p>
+			</div>
+			<div class="col-md-6 col-lg-4">
+				<p class="text-uppercase fw-bold fs-16">Thời gian làm việc</p>
+				<p>Làm việc tất cả các ngày trong tuần từ 7h - 19h</p>
+				<p class="text-uppercase fw-bold fs-16">Liên hệ:</p>
+				<p><i class="fa-solid fa-phone-volume"></i> <strong>0986.555.555</strong></p>
+				<div id="map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.748786878464!2d105.82118017510443!3d21.00270478064013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac86a2e62717%3A0x62c75e9f106d33c3!2zNTA4IMSQLiBUcsaw4budbmcgQ2hpbmgsIEtoxrDGoW5nIFRoxrDhu6NuZywgxJDhu5FuZyDEkGEsIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1711169252667!5m2!1svi!2s" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+			</div>
+				
+			<div class="col-lg-3">
+				<p class="fw-bold text-uppercase">Mạng xã hội</p>
+				<div class="social-media flex" style="gap: 5px;">
+					<a class="social-media-icon" href="javascript:void(0)">
+						<div class="icon-wrapper rounded-pill" style="background-color: #0080db; color: white; width: 46.4px; height: 46.4px; padding: 3; display: flex; justify-content: center; align-items: center;">
+							<i class="fa-brands fa-facebook-f"></i>
+						</div>
+					</a>
+					<a class="social-media-icon" href="javascript:void(0)">
+						<div class="icon-wrapper rounded-pill" style="background-color: #0080db; color: white; width: 46.4px; height: 46.4px; padding: 3; display: flex; justify-content: center; align-items: center;">
+							<i class="fa-brands fa-youtube"></i>	
+						</div>
+					</a>
+					<a class="social-media-icon" href="javascript:void(0)">
+						<div class="icon-wrapper rounded-pill" style="background-color: #0080db; color: white; width: 46.4px; height: 46.4px; padding: 3; display: flex; justify-content: center; align-items: center;">
+							<i class="fa-brands fa-tiktok"></i>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
 
     <script src="./assets/js/main.js"></script>
+	<script src="./assets/js/multiple-carousel.js"></script>
 
 </body>
 </html>

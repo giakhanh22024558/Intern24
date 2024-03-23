@@ -1,4 +1,3 @@
-// Initialization for ES Users
 $(document).ready(function () {
 
     $('.first-button').on('click', function () {
@@ -14,3 +13,4 @@ $(document).ready(function () {
       $('.animated-icon3').toggleClass('open');
     });
 });
+
