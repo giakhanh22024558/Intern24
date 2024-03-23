@@ -1,13 +1,11 @@
 var carouselWidth = $(".carousel-inner-2")[0].scrollWidth;
 var cardWidth = $(".carousel-item-2").width();
 var scrollPosition = 0;
-console.log(carouselWidth + " " + (cardWidth*4));
 
 $(".carousel-control-next-2").on("click", function () {
    if(scrollPosition > 632.7825){
     scrollPosition = 632.7825;
    }
-   console.log(scrollPosition);
 });
 
 $(".carousel-control-next-2").on("click", function () {
