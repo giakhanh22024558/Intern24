@@ -548,6 +548,44 @@ img{
     color: #0d6efd !important;
 }
 
+.header-warpper {
+    background-color: white;
+    position: sticky;
+    top: 0; /* Define where you want the element to stick */
+    z-index: 1000; /* Increase if necessary */
+}
+
+.menu-list .marker::before{
+    content: "|";
+    margin-right: 1rem;
+    color:  rgb(254 202 202);
+}
+.marker2::before{
+    content: "\2022"; /* Unicode character for a bullet point */
+    color: #000; /* Set the color of the bullet point */
+    display: inline-block;
+    width: 1em; /* Adjust the width as needed */
+    margin-left: -1em;
+}
+.body, html {
+    overflow-x: hidden; /* Ngăn chặn cuộn ngang */
+}
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #0d6efd;
+}
+
+
 @media(max-width: 992px) {
     .hotline-label{
         display: none;
@@ -561,6 +599,9 @@ img{
 @media(max-width: 775px){
     .hotline-btn{
         display: none;
+    }
+    .double-input{
+        flex-wrap: wrap;
     }
 }
 
