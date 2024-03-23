@@ -485,7 +485,17 @@ img{
     max-height: 100%;
 }
 
-@media (min-width: 1072px) {
+.carousel-custom{
+    max-width: 945px;;
+}
+
+@media (max-width: 1072px){
+    .carousel-custom{
+        max-width: 645px;;
+    }
+}
+
+@media (min-width: 772px) {
     .carousel-inner-2 {
       display: flex;
     }

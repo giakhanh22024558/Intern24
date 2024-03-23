@@ -4,7 +4,7 @@ var scrollPosition = 0;
 
 $(".carousel-control-next-2").on("click", function () {
   if (scrollPosition < (carouselWidth - cardWidth * 4)) { //check if you can go any further
-    scrollPosition += cardWidth + 16;  //update scroll position
+    scrollPosition += cardWidth ;  //update scroll position
     $(".carousel-inner-2").animate({ scrollLeft: scrollPosition },600); //scroll left
   }
 });
