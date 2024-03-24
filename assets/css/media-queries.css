@@ -52,6 +52,9 @@
     .double-input{
         flex-wrap: wrap;
     }
+    .hr1{
+        width: 500px;
+    }
 }
 
 @media(max-width: 364px){
